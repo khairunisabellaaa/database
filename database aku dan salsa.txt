@@ -1,0 +1,9 @@
+1. SELECT employee.full_name,jobs.name_job FROM employee JOIN jobs ON employee.id_job = jobs.id_job;
+2. SELECT * FROM employee LEFT JOIN jobs ON employee.id_job = employee.id_job WHERE jobs.id_job IS NULL;
+3. SELECT employee.*, jobs.* FROM employee RIGHT JOIN jobs ON employee.id_emplo = jobs.id_job WHERE id_emplo IS NULL;
+4. SELECT employee.*,jobs.*FROM employee LEFT JOIN jobs ON employee.id_job = jobs.id_job WHERE gender = "M";
+5. SELECT employee.*,jobs.*FROM employee RIGHT JOIN jobs ON employee.id_job=jobs.id_job WHERE place_birth ='Bandung' OR place_birth='jakarta';
+6. SELECT employee.*,jobs.*FROM employee LEFT JOIN jobs ON employee.id_job=jobs.id_job ORDER BY date_birth DESC;
+7. SELECT employee.*,jobs.*FROM employee LEFT JOIN jobs ON employee.id_job=jobs.id_job WHERE date_birth LIKE'2000-%';
+8. SELECT jobs.name_job, COUNT(*)FROM employee LEFT JOIN jobs ON employee.id_job = jobs.id_job GROUP BY jobs.name_job;
+9. SELECT employee.*,jobs.*FROM employee LEFT JOIN jobs ON employee.id_job = jobs.id_job WHERE date_birth like "1991-%" OR date_birth LIKE "2000-%" OR date_birth LIKE "2001-%";
